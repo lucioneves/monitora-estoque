@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.form-container{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.form-content-container{
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field {
+    margin-bottom: 25px; /* Ajuste o valor conforme necessário */
+}
+
+.example-full-width {
+    width: 100%;
+ }
+  

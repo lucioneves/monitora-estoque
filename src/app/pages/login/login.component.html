@@ -1,0 +1,22 @@
+<div class="container">    
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-container">
+        <div class="form-content-container">
+            <mat-form-field class="form-field">
+                <mat-label>Usuário</mat-label>
+                <input type="email" matInput formControlName="email" placeholder="Ex. pat@example.com">
+                <mat-error *ngIf="form.controls.email.hasError('email') && !form.controls.email.hasError('required')">Forma de preenchimento inválido</mat-error>
+                <mat-error *ngIf="form.controls.email.hasError('required')">Email é obrigatório</mat-error>
+            </mat-form-field>
+            <mat-form-field class="form-field example-full-width">
+                <mat-label>Senha</mat-label>
+                <input [type]="hidePassword ? 'password' : 'text'" matInput formControlName="password" placeholder="Informe sua senha">
+                <button type="button" mat-icon-button matSuffix (click)="togglePasswordVisibility()">
+                <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+            <button type="submit" mat-raised-button color="primary" (click)="onClick()">Salvar</button>
+        </div>
+    </form>
+</div>
+
+  
