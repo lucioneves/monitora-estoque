@@ -1,0 +1,28 @@
+/* Estilo para o navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    overflow: hidden;
+    z-index: 1000; /* Certifique-se de que está acima de outros elementos */
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Adicione um padding ao conteúdo principal para não ficar escondido atrás do navbar */
+.main-content {
+    padding-top: 50px; /* Ajuste conforme necessário para o tamanho do seu navbar */
+}
