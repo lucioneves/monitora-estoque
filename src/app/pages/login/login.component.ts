@@ -49,6 +49,8 @@ export class LoginComponent {
   onSubmit() {  
     if (this.form.valid) {
       console.log('Form is valid, navigating to /home');
+      localStorage.setItem('authToken', 'dummy-token');
+      console.log('Form is valid, navigating to /home');
       this.router.navigate(['/home']);
     } else {
       console.log('Form is invalid');
