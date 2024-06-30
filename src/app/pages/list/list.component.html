@@ -1,0 +1,6 @@
+<h2>Payments List</h2>
+<ul class="container">
+  <li *ngFor="let payment of payments">
+    {{ payment.productName }} - {{ payment.quantity }} - {{ payment.deliveryDate | date }} - {{ payment.userName }}
+  </li>
+</ul>
