@@ -17,7 +17,12 @@ export class AuthGuard implements CanActivate {
   }
 
   private checkIfAuthenticated(): boolean {
-    // Simular autenticação verificando um token no localStorage
-    return !!localStorage.getItem('authToken');
+    // Verificar se estamos no contexto do navegador
+    if (typeof window !== 'undefined' && window.localStorage) {
+      // Simular autenticação verificando um token no localStorage
+      return !!localStorage.getItem('authToken');
+    }
+    // Se não estamos no contexto do navegador, considerar como não autenticado
+    return false;
   }
 }
