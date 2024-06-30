@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    /* background-color: cadetblue; */
+    
+}
+
+.form-container {
+    max-width: 500px;
+    width: 100%;
+    
+}
+  
+.form-content-container {   
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field {
+    margin-bottom: 16px;
+  }
+  
+  

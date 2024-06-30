@@ -1,0 +1,39 @@
+<div class="container">
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()" class="form-container">
+    <div class="form-content-container">
+      <mat-form-field class="form-field">
+        <mat-label>Code</mat-label>
+        <input matInput formControlName="code" placeholder="Enter product code">
+        <mat-error *ngIf="productForm.get('code')?.invalid && productForm.get('code')?.touched">
+          Code is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="form-field">
+        <mat-label>Description</mat-label>
+        <input matInput formControlName="description" placeholder="Enter product description">
+        <mat-error *ngIf="productForm.get('description')?.invalid && productForm.get('description')?.touched">
+          Description is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="form-field">
+        <mat-label>Entry Date</mat-label>
+        <input matInput formControlName="entryDate" type="date">
+        <mat-error *ngIf="productForm.get('entryDate')?.invalid && productForm.get('entryDate')?.touched">
+          Entry Date is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="form-field">
+        <mat-label>Expiration Date</mat-label>
+        <input matInput formControlName="expirationDate" type="date">
+        <mat-error *ngIf="productForm.get('expirationDate')?.invalid && productForm.get('expirationDate')?.touched">
+          Expiration Date is required
+        </mat-error>
+      </mat-form-field>
+
+      <button type="submit" mat-raised-button color="primary" [disabled]="productForm.invalid">Submit</button>
+    </div>
+  </form>
+</div>
